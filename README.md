@@ -4,7 +4,7 @@
 
  - [Qiitaの記事をGitHubリポジトリで管理する方法](https://qiita.com/Qiita/items/32c79014509987541130) 
 
- - [cli](https://github.com/increments/qiita-cli)
+ - [qiita-cli](https://github.com/increments/qiita-cli)
 
 
 ## 編集してみて思ったこと
@@ -25,4 +25,12 @@ npx qiita preview でなく、Markdown Preview Enhanced でプレビューを見
 
 ```
 npx qiita publish 記事のファイルのベース名
+```
+
+### Qiita 上で更新を行ったとき
+
+以下でQiita と同期
+
+```
+npx qiita pull
 ```
