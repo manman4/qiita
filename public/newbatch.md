@@ -3,7 +3,7 @@ title: Github ニューバッチQuickdrawについて
 tags:
   - GitHub
 private: false
-updated_at: '2023-08-20T01:12:36+09:00'
+updated_at: '2023-08-20T01:38:04+09:00'
 id: db9438ea25d6a6c4ba7c
 organization_url_name: null
 slide: false
@@ -21,4 +21,4 @@ Closed within 5 minutes of opening
 
 ## 簡単に取得するには？
 
-ライセンスをつけたい時にライセンスのプルリクを投げて即自身で承認するのが、一番簡単に取得できると思う。
+ライセンスをつけたい時にライセンスのプルリクを投げてすぐに自身で承認するのが、一番簡単に取得できると思う。
