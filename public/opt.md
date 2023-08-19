@@ -1,14 +1,18 @@
 ---
-title: pulpで連立一次方程式を解く
+title: PuLPで連立一次方程式を解く
 tags:
   - pulp
 private: false
-updated_at: '2023-08-20T02:10:29+09:00'
+updated_at: '2023-08-20T02:32:15+09:00'
 id: ed51ddea644f5f3748d2
 organization_url_name: null
 slide: false
 ---
-# pulpで連立一次方程式を解く
+# PuLPで連立一次方程式を解く
+
+## 前提
+
+あらかじめpulpをインストールしておく。
 
 ## 問題
 
