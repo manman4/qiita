@@ -7,6 +7,7 @@ updated_at: '2023-08-20T01:38:04+09:00'
 id: db9438ea25d6a6c4ba7c
 organization_url_name: null
 slide: false
+ignorePublish: false
 ---
 # Github ニューバッチについて
 
