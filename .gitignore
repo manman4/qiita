@@ -1,2 +1,4 @@
 .remote
 node_modules
+._*
+
