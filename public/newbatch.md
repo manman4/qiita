@@ -3,7 +3,7 @@ title: Github ニューバッチQuickdrawについて
 tags:
   - GitHub
 private: false
-updated_at: '2023-12-17T20:20:31+09:00'
+updated_at: '2024-01-30T00:39:58+09:00'
 id: db9438ea25d6a6c4ba7c
 organization_url_name: null
 slide: false
@@ -26,3 +26,8 @@ Closed within 5 minutes of opening
 ## 簡単に取得するには？
 
 ライセンスをつけたい時にライセンスのプルリクを投げてすぐに自身で承認するのが、一番簡単に取得できると思う。
+
+## スキントーン対応
+
+Settings → Appearance → Emoji skin tone preference で肌の色を設定すると絵文字の（猫？の）肌の色が変わリます。
+
