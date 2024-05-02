@@ -4,7 +4,7 @@ S(x) = sin(x / 180 * Pi);
 C(x) = cos(x / 180 * Pi);
 AT(x) = atan(x) * 180 / Pi;
 f(a, b, c, d) = S(b+c+d) * S(a) * S(c);
-g(a, b, c, d) = S(b) * S(d - a) + S(b+c+d) * S(a) * C(c);
+g(a, b, c, d) = S(b) * S(d-a) + S(b+c+d) * S(a) * C(c);
 h(a, b, c, d) = if(g(a, b, c, d)==0, 90, AT(f(a, b, c, d) / g(a, b, c, d)));
 cnt = 0;
 \\ a<d, a+b+c<180, b+c+d<180
