@@ -1,15 +1,15 @@
 ---
-title: Github ニューバッチQuickdrawについて
+title: GitHub ニューバッチQuickdrawについて
 tags:
   - GitHub
 private: false
-updated_at: '2024-01-30T00:39:58+09:00'
+updated_at: '2024-08-14T02:07:22+09:00'
 id: db9438ea25d6a6c4ba7c
 organization_url_name: null
 slide: false
 ignorePublish: false
 ---
-# Github ニューバッチについて
+# GitHub ニューバッチについて
 
 Quickdrawというバッチが増えたようです。
 
