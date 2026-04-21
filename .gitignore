@@ -5,3 +5,4 @@ node_modules
 stripped
 
 .env
+.claude/settings.local.json
