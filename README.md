@@ -21,11 +21,22 @@ npx qiita preview でなく、Markdown Preview Enhanced でプレビューを見
 
 ### 公開
 
-普通にpushしても良いが、記事作成または更新日時をpullする必要がありそうなので、以下のようにする。
+**必ず `qiita pull` してから編集・push する。** 順番を守らないと `updated_at` がずれて GitHub Actions が以下のエラーで失敗する。
 
 ```
-npx qiita publish 記事のファイルのベース名
+内容がQiita上の記事より古い可能性があります
 ```
+
+#### 正しい手順
+
+```bash
+npx qiita pull       # 1. まず Qiita から最新を取得
+# ファイルを編集
+git add . && git commit -m "メッセージ"
+git push             # 2. push すると GitHub Actions が自動で公開
+```
+
+push 後、Qiita-cli が `updated_at` を更新した "Updated by qiita-cli" コミットが自動で作られる。次に編集するときは再度 `qiita pull` を忘れずに。
 
 ### Qiita 上で更新を行ったとき
 
