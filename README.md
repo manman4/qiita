@@ -19,9 +19,14 @@ tagも忘れずつける。
 
 npx qiita preview でなく、Markdown Preview Enhanced でプレビューを見る方が速い。
 
+ただし Qiita 独自記法（`:::note`、数式、コードブロックのファイル名など）は Qiita と同じには表示されないので、公開前に一度は `npx qiita preview` で確認する。
+
 ### 公開
 
-**必ず `qiita pull` してから編集・push する。** 順番を守らないと `updated_at` がずれて GitHub Actions が以下のエラーで失敗する。
+**必ず `git pull` してから編集・push する。** push 後に GitHub Actions が "Updated by qiita-cli" コミット（`updated_at` の更新）を **GitHub 上に** 作るため、これを取り込まずに編集すると以下のどちらかで失敗する。
+
+- `git push` が non-fast-forward で拒否される
+- `updated_at` がずれて GitHub Actions が以下のエラーで失敗する
 
 ```
 内容がQiita上の記事より古い可能性があります
@@ -30,18 +35,24 @@ npx qiita preview でなく、Markdown Preview Enhanced でプレビューを見
 #### 正しい手順
 
 ```bash
-npx qiita pull       # 1. まず Qiita から最新を取得
+git pull             # 1. Actions が作ったコミットを取り込む（毎回必須）
 # ファイルを編集
-git add . && git commit -m "メッセージ"
+git add public/ && git commit -m "メッセージ"
 git push             # 2. push すると GitHub Actions が自動で公開
 ```
 
-push 後、Qiita-cli が `updated_at` を更新した "Updated by qiita-cli" コミットが自動で作られる。次に編集するときは再度 `qiita pull` を忘れずに。
+- `npx qiita pull` は Qiita から記事を取得するだけで、git のコミットは揃わない。`git pull` の代わりにはならない。
+- `git add .` だと `package.json` や `資料/` など記事以外の変更も入るので、記事だけなら `git add public/` にする。
 
 ### Qiita 上で更新を行ったとき
 
-以下でQiita と同期
+Qiita の Web 画面で編集した場合は、Qiita と同期してから GitHub にも反映する。
 
+```bash
+git pull             # 1. まず GitHub の最新を取り込む
+npx qiita pull       # 2. Qiita の内容を手元に反映
+git add public/ && git commit -m "Qiitaと同期"
+git push             # 3. GitHub にも反映
 ```
-npx qiita pull
-```
+
+commit・push しないと GitHub 側が古いままになり、次の公開で `updated_at` がずれる原因になる。

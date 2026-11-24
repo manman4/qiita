@@ -9,6 +9,8 @@ id: ed51ddea644f5f3748d2
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # PuLPで連立一次方程式を解く
 
